@@ -1,3 +1,7 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FET Диагностика</title>
 <!-- Замена заголовков сервера: GitHub Pages не отдаёт собственные заголовки,
      поэтому запрет индексации, запрет передачи адреса страницы и запрет встраивания
@@ -80,11 +84,11 @@
    лёгкий Cormorant в заголовках. Телефон — главный экран: крупный текст утверждений, ответы 64px, кнопки на всю ширину.
    Тёмная тема по умолчанию, светлая — [data-theme="light"] как на сайте (плюс системная светлая как запасной вариант). */
 :root{
-  --bg:#0b0907; --bg-2:#100d0a; --bg-3:#181310;
-  --gold:#d4a87a; --gold-2:#e4be96; --gold-3:#f0d4aa;
-  --cream:#f5efe6; --muted:#b0a090; --muted-2:#7a6a58;
-  --line:rgba(212,168,122,.25); --line-2:rgba(245,239,230,.1);
-  --soft-accent:linear-gradient(135deg,rgba(212,168,122,.06),rgba(212,168,122,.02));
+  --bg:#0c0e0d; --bg-2:#141715; --bg-3:#1c201e;
+  --gold:#6cc792; --gold-2:#8ad6a9; --gold-3:#b0e6c6;
+  --cream:#f3f6f4; --muted:#c9d1cc; --muted-2:#a3ada7;
+  --line:rgba(108,199,146,.3); --line-2:rgba(243,246,244,.14);
+  --soft-accent:linear-gradient(135deg,rgba(108,199,146,.06),rgba(108,199,146,.02));
   --ok:#7fb58a; --ok-soft:rgba(127,181,138,.14); --hi:#8fb0d4; --hi-soft:rgba(143,176,212,.14); --lo:#b9a3d8; --lo-soft:rgba(185,163,216,.14);
   --att:#f0944d; --att-soft:rgba(240,148,77,.16); --yel:#e3c65a; --yel-soft:rgba(227,198,90,.16);
   --on-chip:#0b0907;
@@ -92,30 +96,30 @@
   color-scheme:dark;
 }
 @media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
-  --bg:#f7f1e5; --bg-2:#efe6d3; --bg-3:#e7dcc4; --gold:#9c6a2e; --gold-2:#b07a3a; --gold-3:#c48f4d;
-  --cream:#2c1f12; --muted:#5a4636; --muted-2:#8a7560; --line:rgba(156,106,46,.3); --line-2:rgba(44,31,18,.1);
-  --soft-accent:linear-gradient(135deg,rgba(156,106,46,.06),rgba(156,106,46,.02));
-  --ok:#2f7a44; --ok-soft:rgba(47,122,68,.12); --hi:#2f5f8a; --hi-soft:rgba(47,95,138,.12); --lo:#6d4f9a; --lo-soft:rgba(109,79,154,.12);
-  --att:#c4661c; --att-soft:rgba(196,102,28,.14); --yel:#9a7a12; --yel-soft:rgba(154,122,18,.14); --on-chip:#fff;
+  --bg:#ffffff; --bg-2:#f3f5f4; --bg-3:#e9ecea; --gold:#1f5c3a; --gold-2:#2a6644; --gold-3:#2f7350;
+  --cream:#111413; --muted:#3a423e; --muted-2:#55605a; --line:rgba(31,92,58,.35); --line-2:rgba(17,20,19,.14);
+  --soft-accent:linear-gradient(135deg,rgba(31,92,58,.06),rgba(31,92,58,.02));
+  --ok:#256b3a; --ok-soft:rgba(47,122,68,.12); --hi:#285680; --hi-soft:rgba(47,95,138,.12); --lo:#5f4390; --lo-soft:rgba(109,79,154,.12);
+  --att:#a5520f; --att-soft:rgba(196,102,28,.14); --yel:#7a5f08; --yel-soft:rgba(154,122,18,.14); --on-chip:#fff;
   color-scheme:light }}
 :root[data-theme="light"]{
-  --bg:#f7f1e5; --bg-2:#efe6d3; --bg-3:#e7dcc4; --gold:#9c6a2e; --gold-2:#b07a3a; --gold-3:#c48f4d;
-  --cream:#2c1f12; --muted:#5a4636; --muted-2:#8a7560; --line:rgba(156,106,46,.3); --line-2:rgba(44,31,18,.1);
-  --soft-accent:linear-gradient(135deg,rgba(156,106,46,.06),rgba(156,106,46,.02));
-  --ok:#2f7a44; --ok-soft:rgba(47,122,68,.12); --hi:#2f5f8a; --hi-soft:rgba(47,95,138,.12); --lo:#6d4f9a; --lo-soft:rgba(109,79,154,.12);
-  --att:#c4661c; --att-soft:rgba(196,102,28,.14); --yel:#9a7a12; --yel-soft:rgba(154,122,18,.14); --on-chip:#fff;
+  --bg:#ffffff; --bg-2:#f3f5f4; --bg-3:#e9ecea; --gold:#1f5c3a; --gold-2:#2a6644; --gold-3:#2f7350;
+  --cream:#111413; --muted:#3a423e; --muted-2:#55605a; --line:rgba(31,92,58,.35); --line-2:rgba(17,20,19,.14);
+  --soft-accent:linear-gradient(135deg,rgba(31,92,58,.06),rgba(31,92,58,.02));
+  --ok:#256b3a; --ok-soft:rgba(47,122,68,.12); --hi:#285680; --hi-soft:rgba(47,95,138,.12); --lo:#5f4390; --lo-soft:rgba(109,79,154,.12);
+  --att:#a5520f; --att-soft:rgba(196,102,28,.14); --yel:#7a5f08; --yel-soft:rgba(154,122,18,.14); --on-chip:#fff;
   color-scheme:light }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 [hidden]{display:none!important}
-body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.6;padding-inline:16px;padding-block:0;margin:0}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:400;font-size:19px;line-height:1.6;padding-inline:16px;padding-block:0;margin:0}
 .app{max-width:720px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;gap:22px;padding-block:14px 64px}
 h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em;color:var(--cream)}
 h1{font-size:clamp(38px,9vw,56px)} h2{font-size:clamp(28px,7vw,40px)} h3{font-size:clamp(22px,5.4vw,26px)}
 h1 em,h2 em{font-style:italic;color:var(--gold-2)}
 p{margin:0;max-width:66ch}
 b,strong{font-weight:500}
-.muted{color:var(--muted)} .small{font-size:14.5px} .gold{color:var(--gold)}
-.eyebrow{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:10px}
+.muted{color:var(--muted)} .small{font-size:16px} .gold{color:var(--gold)}
+.eyebrow{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:18px;height:1px;background:var(--gold);flex:none}
 .topbar .eyebrow::before{display:none}
 .btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--gold);background:var(--gold);color:var(--bg);font:500 13px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:0 24px;min-height:52px;border-radius:2px;cursor:pointer;text-decoration:none;transition:background .3s,border-color .3s,transform .15s}
@@ -136,11 +140,11 @@ b,strong{font-weight:500}
 .tl .dot{width:30px;height:30px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font:500 13px var(--sans);color:var(--gold);background:var(--bg)}
 .tl .body{padding-bottom:22px;border-left:1px solid var(--line);margin-left:-16px;padding-left:30px;transform:translateX(1px)}
 .tl:last-child .body{border-left-color:transparent;padding-bottom:0}
-.tl h3{font-size:22px;margin-bottom:4px}
+.tl h3{font-size:24.5px;margin-bottom:4px}
 /* вопросы — телефон главный */
 .progress{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;height:5px;background:var(--bg-3);border-radius:2px;overflow:hidden}
 .progress i{display:block;height:100%;background:var(--gold);width:0;transition:width .25s ease}
-.qnum{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+.qnum{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
 .qtext{font-family:var(--serif);font-weight:400;font-size:clamp(27px,7vw,36px);line-height:1.22;min-height:3.4em;text-wrap:balance;color:var(--cream)}
 .answers{display:grid;gap:10px}
 .ans{appearance:none;display:grid;grid-template-columns:40px 1fr;align-items:center;gap:14px;text-align:left;background:var(--bg-2);border:1px solid var(--line);color:var(--cream);border-radius:3px;padding:14px 16px;font:300 18px/1.3 var(--sans);min-height:64px;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
@@ -149,15 +153,15 @@ b,strong{font-weight:500}
 .ans.sel{background:var(--soft-accent);border-color:var(--gold);transform:scale(1.01)} .ans.sel b{background:var(--gold);color:var(--bg);border-color:var(--gold)}
 .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
 .nav .btn:last-child{justify-self:end}
-.saved{font-size:13px;color:var(--muted)}
+.saved{font-size:14.5px;color:var(--muted)}
 /* отчёт */
 .badge,.zc{display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:2px;font:500 12px var(--sans);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 .badge{white-space:normal;line-height:1.3;text-align:left}
 .app>*,.card,.stack>*{min-width:0}
 .badge.ok{background:var(--ok-soft);color:var(--ok)} .badge.hi{background:var(--hi-soft);color:var(--hi)} .badge.lo{background:var(--lo-soft);color:var(--lo)} .badge.att{background:var(--att-soft);color:var(--att)} .badge.yel{background:var(--yel-soft);color:var(--yel)}
-.zc .ic{font-size:13px;line-height:1}
+.zc .ic{font-size:14.5px;line-height:1}
 .zc.ok{background:var(--ok);color:var(--on-chip)} .zc.hi{background:var(--hi);color:var(--on-chip)} .zc.lo{background:var(--lo);color:var(--on-chip)} .zc.att{background:var(--att);color:var(--on-chip)} .zc.yel{background:var(--yel);color:var(--on-chip)}
-.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13px;color:var(--muted);min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:14.5px;color:var(--muted);min-width:0}
 .legend .zc{white-space:normal;text-align:left;line-height:1.3;max-width:100%}
 h1,h2,h3,.qtext{overflow-wrap:anywhere}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:6px}
@@ -168,48 +172,48 @@ h1,h2,h3,.qtext{overflow-wrap:anywhere}
 .attn.lo{border-color:var(--lo);background:var(--lo-soft)} .attn.att{border-color:var(--att);background:var(--att-soft)} .attn.yel{border-color:var(--yel);background:var(--yel-soft)}
 .attn .big{font:500 12px var(--sans);letter-spacing:.14em;text-transform:uppercase}
 .attn.lo .big{color:var(--lo)} .attn.att .big{color:var(--att)} .attn.yel .big{color:var(--yel)} .attn:not(.lo):not(.att):not(.yel) .big{color:var(--hi)}
-.attn p.small{font-size:15.5px;line-height:1.55}
-.med{font-size:13px;color:var(--muted-2)}
-.matrix{width:100%;border-collapse:collapse;font-size:14px}
+.attn p.small{font-size:17.5px;line-height:1.55}
+.med{font-size:14.5px;color:var(--muted-2)}
+.matrix{width:100%;border-collapse:collapse;font-size:15.5px}
 .matrix th,.matrix td{border:1px solid var(--line-2);padding:10px 8px;text-align:center;vertical-align:top}
-.matrix th{font-weight:500;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.matrix td:first-child,.matrix th:first-child{text-align:left;color:var(--muted);font-size:13px}
-.matrix .c{display:grid;gap:6px;justify-items:center} .matrix .c b{font-size:15.5px;font-weight:500;color:var(--cream);text-wrap:balance}
+.matrix th{font-weight:500;color:var(--muted);font-size:13.5px;letter-spacing:.14em;text-transform:uppercase}
+.matrix td:first-child,.matrix th:first-child{text-align:left;color:var(--muted);font-size:14.5px}
+.matrix .c{display:grid;gap:6px;justify-items:center} .matrix .c b{font-size:17.5px;font-weight:500;color:var(--cream);text-wrap:balance}
 .matrix td.lo .c b{color:var(--lo)} .matrix td.hi .c b{color:var(--hi)}
 .matrix td.hi{background:var(--hi-soft);box-shadow:inset 0 0 0 2px var(--hi)} .matrix td.lo{background:var(--lo-soft);box-shadow:inset 0 0 0 2px var(--lo)} .matrix td.ok{background:var(--ok-soft);box-shadow:inset 0 0 0 1px var(--ok)}
 .matrix .c .n{font-variant-numeric:tabular-nums;font-size:24px;font-family:var(--serif);font-weight:400;color:var(--cream)}
-.matrix .c .code{font-size:11px;letter-spacing:.12em;color:var(--muted-2)}
+.matrix .c .code{font-size:13.5px;letter-spacing:.12em;color:var(--muted-2)}
 .matrix .c .marks{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
 .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:3px}
-.res{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.res{width:100%;border-collapse:collapse;font-size:17px;font-variant-numeric:tabular-nums}
 .res th,.res td{padding:9px 10px;border-bottom:1px solid var(--line-2);text-align:left;vertical-align:middle}
-.res th{font-weight:500;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.res th{font-weight:500;color:var(--muted);font-size:13.5px;letter-spacing:.14em;text-transform:uppercase}
 .res tr:last-child td{border-bottom:0}
-.res td.n{text-align:right;font-weight:500;font-size:17px}
+.res td.n{text-align:right;font-weight:500;font-size:19px}
 .res td.code{font-weight:500;color:var(--muted-2);letter-spacing:.08em}
 .res td.lead{font-weight:500;color:var(--gold)}
 .res tr.cntl td{border-top:1px solid var(--line)}
 .linechart{width:100%;height:auto;display:block}
 .clinimg{display:block;width:100%;height:auto;border-radius:3px;border:1px solid var(--line);background:#fff}
 details{border:1px solid var(--line);border-radius:3px;background:var(--bg-2)}
-details summary{cursor:pointer;padding:16px 20px;font-weight:400;list-style:none;display:flex;justify-content:space-between;gap:10px;font-family:var(--serif);font-size:20px}
+details summary{cursor:pointer;padding:16px 20px;font-weight:400;list-style:none;display:flex;justify-content:space-between;gap:10px;font-family:var(--serif);font-size:22.5px}
 details summary::-webkit-details-marker{display:none}
 details summary::after{content:"+";color:var(--gold);font-size:24px;line-height:1} details[open] summary::after{content:"–"}
 details .in{padding:0 20px 20px;display:grid;gap:12px}
 .warnbox{border-left:2px solid var(--gold);padding:14px 18px;background:var(--soft-accent);border-radius:0 3px 3px 0}
 .warnbox .big{font:500 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px}
-label.chk{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start;cursor:pointer;font-size:15.5px;line-height:1.5}
+label.chk{display:grid;grid-template-columns:26px 1fr;gap:14px;align-items:start;cursor:pointer;font-size:17.5px;line-height:1.5}
 label.chk input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--gold)}
 input[type=text],input[type=number]{width:100%;background:var(--bg-2);border:1px solid var(--line);color:var(--cream);border-radius:2px;padding:14px 14px;font:300 17px var(--sans);min-height:52px}
-.field{display:grid;gap:6px}.field span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.field{display:grid;gap:6px}.field span{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px} .fields .field:first-child{grid-column:1/-1}
-.note{font-size:15px;color:var(--muted);line-height:1.55}
-.proto,.attrib{font-size:13.5px;color:var(--muted-2);border-top:1px solid var(--line-2);padding-top:14px;line-height:1.55}
+.note{font-size:17px;color:var(--muted);line-height:1.55}
+.proto,.attrib{font-size:15px;color:var(--muted-2);border-top:1px solid var(--line-2);padding-top:14px;line-height:1.55}
 .attrib b{color:var(--muted)}
 a{color:var(--gold)}
 /* телефон: всё крупнее и на всю ширину; компьютер — как есть */
 @media (max-width:640px){
-  body{font-size:16.5px}
+  body{font-size:18.5px}
   .app{gap:18px}
   .card{padding:16px 14px}
   .row .btn{width:100%}
@@ -220,13 +224,13 @@ a{color:var(--gold)}
   .scale-card .head{flex-direction:column;gap:8px}
   .scale-card .score{font-size:44px}
   .lang button{padding:9px 12px}
-  .res{font-size:14px} .res th,.res td{padding:8px 7px}
-  .matrix .c b{font-size:14.5px}
+  .res{font-size:15.5px} .res th,.res td{padding:8px 7px}
+  .matrix .c b{font-size:16px}
 }
 
 /* ---- компоненты bilokoz.com ---- */
 .site-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:62px;border-bottom:1px solid var(--line-2);margin-bottom:4px}
-.logo{display:flex;align-items:center;min-height:44px;font-family:var(--serif);font-size:19px;font-weight:400;letter-spacing:.06em;color:var(--cream);text-decoration:none}
+.logo{display:flex;align-items:center;min-height:44px;font-family:var(--serif);font-size:21.5px;font-weight:400;letter-spacing:.06em;color:var(--cream);text-decoration:none}
 .logo span{color:var(--gold);font-style:italic;margin-left:.3em}
 .nav-right{display:flex;align-items:center;gap:10px}
 .back-link{display:inline-flex;align-items:center;min-height:40px;padding:0 8px;font:500 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;white-space:nowrap}
@@ -238,57 +242,57 @@ a{color:var(--gold)}
 .ic-sun{display:block} .ic-moon{display:none}
 :root[data-theme="light"] .ic-sun{display:none} :root[data-theme="light"] .ic-moon{display:block}
 .page-hero{padding-top:36px;padding-bottom:26px;border-bottom:1px solid var(--line-2)}
-.page-hero .eyebrow{font-size:10px;letter-spacing:.3em}
+.page-hero .eyebrow{font-size:13px;letter-spacing:.3em}
 .page-title{font-family:var(--serif);font-size:clamp(36px,9vw,56px);font-weight:300;line-height:1.04;letter-spacing:-.02em;color:var(--cream);margin-top:10px}
 .page-title em,.h2 em{font-style:italic;color:var(--gold-2)}
-.page-lede{font-size:17px;color:var(--muted);line-height:1.62;max-width:74ch;margin-top:14px}
+.page-lede{font-size:19px;color:var(--muted);line-height:1.62;max-width:74ch;margin-top:14px}
 .sec{position:relative} .pad{padding-top:44px;padding-bottom:16px}
 .h2{font-family:var(--serif);font-size:clamp(26px,7.4vw,36px);font-weight:300;line-height:1.12;color:var(--cream);letter-spacing:-.01em;margin:0 0 18px}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2);border-radius:4px;overflow:hidden;margin:0 0 22px}
 .card.step{background:var(--bg-2);border:0;border-radius:0;padding:20px 18px}
 .card-n{font-family:var(--serif);font-size:30px;color:var(--line);line-height:1;margin-bottom:10px}
-.card-title{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--cream);margin:0 0 8px}
-.card.step p{font-size:14.5px;color:var(--muted);line-height:1.55}
+.card-title{font-family:var(--serif);font-size:23.5px;font-weight:400;color:var(--cream);margin:0 0 8px}
+.card.step p{font-size:16px;color:var(--muted);line-height:1.55}
 .cta{margin-bottom:14px}
-.not-dx{margin-top:22px;padding:14px 18px;border:1px solid var(--line-2);border-left:2px solid var(--gold);border-radius:3px;font-size:14.5px;color:var(--muted);line-height:1.65}
+.not-dx{margin-top:22px;padding:14px 18px;border:1px solid var(--line-2);border-left:2px solid var(--gold);border-radius:3px;font-size:16px;color:var(--muted);line-height:1.65}
 .not-dx b{color:var(--cream);font-weight:400}
 .footer{border-top:1px solid var(--line-2);padding:28px 0 8px;margin-top:10px}
 .frow{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer .logo{font-size:17px}
-.copy{font-size:11px;color:var(--muted-2)}
+.footer .logo{font-size:19px}
+.copy{font-size:13.5px;color:var(--muted-2)}
 @media (max-width:640px){
-  .site-nav{min-height:56px} .logo{font-size:17px;letter-spacing:.04em}
+  .site-nav{min-height:56px} .logo{font-size:19px;letter-spacing:.04em}
   .page-hero{padding-top:26px;padding-bottom:20px}
   .cards{grid-template-columns:1fr}
   .frow{flex-direction:column;align-items:flex-start;gap:6px}
 }
 
 /* ---- карта FET: компактная, вписана в экран ---- */
-.matrix{table-layout:fixed;width:100%;font-size:12.5px}
+.matrix{table-layout:fixed;width:100%;font-size:14px}
 .matrix th,.matrix td{padding:6px 5px}
-.matrix th{font-size:10px;letter-spacing:.1em}
-.matrix td:first-child,.matrix th:first-child{width:17%;font-size:12px;line-height:1.25;padding-left:6px}
+.matrix th{font-size:13px;letter-spacing:.1em}
+.matrix td:first-child,.matrix th:first-child{width:17%;font-size:14px;line-height:1.25;padding-left:6px}
 .matrix td.hi,.matrix td.lo,.matrix td.ok{padding:8px 5px}
 .matrix .c{gap:4px}
-.matrix .c b{font-size:13.5px;line-height:1.2;text-shadow:none}
-.matrix .c .n{font-size:21px;line-height:1}
+.matrix .c b{font-size:15px;line-height:1.2;text-shadow:none}
+.matrix .c .n{font-size:23.5px;line-height:1}
 .matrix .c .code{display:none}
 .matrix .c .marks{gap:3px}
-.matrix .zc{padding:3px 7px;font-size:10px;letter-spacing:.03em;white-space:normal;text-align:center;line-height:1.2}
-.matrix .zc .ic{font-size:11px}
+.matrix .zc{padding:3px 7px;font-size:13px;letter-spacing:.03em;white-space:normal;text-align:center;line-height:1.2}
+.matrix .zc .ic{font-size:13.5px}
 .matrix td.hi{box-shadow:inset 0 0 0 1px var(--hi)} .matrix td.lo{box-shadow:inset 0 0 0 1px var(--lo)}
 @media (max-width:640px){
-  .matrix{font-size:11.5px}
+  .matrix{font-size:14px}
   .matrix th,.matrix td{padding:5px 3px}
-  .matrix th{font-size:9px;letter-spacing:.06em}
-  .matrix td:first-child,.matrix th:first-child{width:16%;font-size:10.5px;padding-left:4px}
+  .matrix th{font-size:12.5px;letter-spacing:.06em}
+  .matrix td:first-child,.matrix th:first-child{width:16%;font-size:13px;padding-left:4px}
   .matrix td.hi,.matrix td.lo,.matrix td.ok{padding:6px 3px}
-  .matrix .c b{font-size:12px}
-  .matrix .c .n{font-size:18px}
-  .matrix .zc{padding:2px 5px;font-size:9px;gap:3px}
+  .matrix .c b{font-size:14px}
+  .matrix .c .n{font-size:20px}
+  .matrix .zc{padding:2px 5px;font-size:12.5px;gap:3px}
 }
 
-.matrix .c .fn{display:none;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2)}
+.matrix .c .fn{display:none;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2)}
 .site-nav{flex-wrap:wrap}
 @media (max-width:640px){
   /* карта на телефоне: уровень — заголовок, три ячейки в ряд */
@@ -296,11 +300,11 @@ a{color:var(--gold)}
   .matrix tr.hdr{display:none}
   .matrix tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin:0 0 10px}
   .matrix td{display:block;border:1px solid var(--line-2);border-radius:3px;min-width:0;padding:7px 4px}
-  .matrix td:first-child{grid-column:1/-1;border:0;padding:0 0 2px;width:auto;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:left}
+  .matrix td:first-child{grid-column:1/-1;border:0;padding:0 0 2px;width:auto;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-align:left}
   .matrix .c .fn{display:block}
-  .matrix .c b{font-size:12.5px;overflow-wrap:anywhere}
-  .matrix .c .n{font-size:20px}
-  .legend .zc{font-size:10px;padding:3px 8px}
+  .matrix .c b{font-size:14px;overflow-wrap:anywhere}
+  .matrix .c .n{font-size:22.5px}
+  .legend .zc{font-size:13px;padding:3px 8px}
 }
 
 .matrix .c{width:100%;min-width:0}
@@ -308,6 +312,13 @@ a{color:var(--gold)}
 .matrix .c .marks{width:100%}
 .matrix .zc{max-width:100%;overflow-wrap:anywhere}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+/* fet-palette-2026-11-18: цвета автора модели, контраст AA, крупнее шрифт */
+.refs{margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);text-align:left}
+.refs h4{font-family:var(--sans);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 10px;font-weight:500}
+.refs ol{margin:0 0 0 20px;padding:0;display:grid;gap:9px}
+.refs li{font-size:15px;line-height:1.5;color:var(--muted)}
+.refs a{color:var(--gold)}
+.refs p{margin:14px 0 0;font-size:16px}
 </style>
 
 <div class="app" id="app" data-api="https://fet.bilokoz.com/api/fet" data-mode="server" data-build="v7.1" data-key="author-compact-stq-77" data-form="items-v2-2026-10-12">
@@ -503,7 +514,8 @@ ru:{
  clin_src:"Слайд Ирины Трофимовой «Psychiatric Disorders in the FET framework» (оригинал на английском, воспроизведён как есть). Жёлтое — черта ниже зоны, розовое — выше, белое — без отметки. Клинические исследования автора: Trofimova & Sulis, 2010, 2016 (депрессия), 2018 (тревожные расстройства).",
  next_h:"Что дальше", next_p:"Отчёт описал черты по одной. Консультация делает то, чего отчёт сделать не может: связывает их друг с другом, с вашим возрастом, запросом и обстоятельствами, и переводит в действия. Подробная анкета перед встречей сейчас в разработке; пока достаточно записаться.",
  btn_book:"Записаться на консультацию", btn_restart:"Пройти заново", nav_back:"← К странице FET", btn_forget:"Удалить данные теста из этого браузера", forget_ok:"Удалить ответы, анкету и отчёт из этого браузера? Запись на сервере это не удаляет: для этого напишите Дмитрию.",
- attrib:"<b>Автор опросника и модели</b> — Ирина Трофимова (Compact STQ-77, модель FET). Оригинальные бланки на русском и английском размещены на <a href=\"https://psonline.ca/ira/ira.html\" target=\"_blank\" rel=\"noopener\">сайте автора</a>. Эта страница — веб-реализация опросника с авторским ключом и зонами авторского шаблона. Пояснения к чертам и пометки «полезно обсудить» — моя доработка и интерпретация (на правах ученика), не авторский текст. Тест бесплатен и не используется в коммерческих целях.",
+ refs_h:"Ключевые работы автора модели", refs_full:"Полный список публикаций по STQ и FET →",
+ attrib:"<b>Автор опросника и модели</b> — Ирина Трофимова (Compact STQ-77, модель FET). Оригинальные бланки на русском и английском размещены на <a href=\"https://psonline.ca/PS-STQ.htm\" target=\"_blank\" rel=\"noopener\">сайте автора</a>. Эта страница — веб-реализация опросника с авторским ключом и зонами авторского шаблона. Пояснения к чертам и пометки «полезно обсудить» — моя доработка и интерпретация (на правах ученика), не авторский текст. Тест бесплатен и не используется в коммерческих целях.",
  proto:"Рабочая версия от 2026-10-12 (v7.1). Расчёт выполняется на сервере; страница только показывает ваш фрагмент отчёта. Ключ: авторский ключ Compact STQ (20 обратных пунктов). Зоны: авторский Excel-шаблон STQ-77. Формулировки: текущие авторские формы RU/EN; русские тексты согласованы 12.10.2026, финальная редакция — Дмитрий. Зоны Low/Average/High — описательные ярлыки авторского шаблона, не сигнал. Слой внимания (◇ ◆) — моя методика, не часть авторского шаблона Правила слоя внимания хранятся на сервере и в тексте страницы не публикуются."
 },
 en:{
@@ -544,7 +556,8 @@ en:{
  clin_src:"Irina Trofimova’s slide “Psychiatric Disorders in the FET framework” (reproduced as is). Yellow: trait below the zone; pink: above; white: no mark. The author’s clinical studies: Trofimova & Sulis, 2010, 2016 (depression), 2018 (anxiety disorders).",
  next_h:"What next", next_p:"The report described the traits one by one. A consultation does what the report cannot: it links them to each other, to your age, your request and your circumstances, and turns them into actions. The detailed pre-meeting questionnaire is in development; for now, booking is enough.",
  btn_book:"Book a consultation", btn_restart:"Start over", nav_back:"← Back to FET", btn_forget:"Delete test data from this browser", forget_ok:"Delete your answers, form and report from this browser? This does not delete the record on the server: for that, write to Dmitry.",
- attrib:"<b>Author of the questionnaire and the model</b>: Irina Trofimova (Compact STQ-77, the FET model). The original Russian and English forms are on the <a href=\"https://psonline.ca/ira/ira.html\" target=\"_blank\" rel=\"noopener\">author’s website</a>. This page is a web implementation of the questionnaire with the author’s key and the zones of the author’s template. The trait explanations and the “worth discussing” marks are my own elaboration and interpretation (as a student of the author), not the author’s text. The test is free and not used for commercial purposes.",
+ refs_h:"Key references", refs_full:"Full publication list →",
+ attrib:"<b>Author of the questionnaire and the model</b>: Irina Trofimova (Compact STQ-77, the FET model). The original Russian and English forms are on the <a href=\"https://psonline.ca/PS-STQ.htm\" target=\"_blank\" rel=\"noopener\">author’s website</a>. This page is a web implementation of the questionnaire with the author’s key and the zones of the author’s template. The trait explanations and the “worth discussing” marks are my own elaboration and interpretation (as a student of the author), not the author’s text. The test is free and not used for commercial purposes.",
  proto:"Working version 2026-10-12 (v7.1). In this version the the calculation runs on the server; this page only renders your fragment of the report. Key: the author’s Compact STQ key (20 reversed items). Zones: the author’s STQ-77 Excel template. Wording: the author’s current RU/EN forms; Russian texts agreed on 12.10.2026, final editing by Dmitry. The Low/Average/High zones are descriptive labels of the author’s template, not a signal. The attention layer (◇ ◆) is Dmitry’s methodology, not part of the author’s template The attention-layer rules are kept on the server and are not published in this page."
 }};
 
@@ -667,7 +680,8 @@ function applyStatic(){
   $("year").textContent=new Date().getFullYear();
   $("gl-list").innerHTML=GLOSSARY[L].map(g=>`<div class="card scale-card"><h3 style="font-size:20px">${g[0]}</h3><p class="small"><span class="eyebrow" style="display:inline-flex;margin-right:6px">${t("gl_role")}</span>${g[1]}</p><p class="small muted"><span class="eyebrow" style="display:inline-flex;margin-right:6px">${t("gl_bal")}</span>${g[2]}</p></div>`).join("");
   $("rules").innerHTML=t("rules"); $("consent-text").innerHTML=t("consent"); $("f-sex").placeholder=t("f_sex_ph");
-  $("attrib-intro").innerHTML=t("attrib"); $("attrib-result").innerHTML=t("attrib");
+  const REFS_HTML="<ol><li lang=\"en\">Trofimova, I. (2016). The interlocking between functional aspects of activities and a neurochemical model of adult temperament. In: Arnold, M. C. (Ed.) <i>Temperaments: Individual Differences, Social and Environmental Influences and Impact on Quality of Life</i>. Nova Science Publishers, Inc., NY, p. 77–147. ISBN: 978-1-63484-152-8.</li><li lang=\"en\">Trofimova, I. (2018). Functionality vs dimensionality in psychological taxonomies, and a puzzle of emotional valence. <i>Philosophical Transactions of the Royal Society, Biological Sciences</i>, 373 (1744). doi: <a href=\"https://doi.org/10.1098/rstb.2017.0167\" target=\"_blank\" rel=\"noopener\">10.1098/rstb.2017.0167</a></li><li lang=\"en\">Trofimova, I. (2019). An overlap between mental abilities and temperament traits. In: McFarland, D. (Ed.) <i>General and specific mental abilities</i>. Cambridge, UK: Cambridge Scholars Publishing. Pp. 176–225. ISBN-10: 1527533107, ISBN-13: 978-1-5275-3310-3.</li><li lang=\"en\">Trofimova, I. (2021a). Contingent tunes of neurochemical ensembles in the norm and pathology: can we see the patterns? <i>Neuropsychobiology</i>, 80(2), 101–133. PMID: 33721867. doi: <a href=\"https://doi.org/10.1159/000513688\" target=\"_blank\" rel=\"noopener\">10.1159/000513688</a></li><li lang=\"en\">Trofimova, I. (2021b). Functional constructivism approach to multilevel nature of biobehavioural diversity. <i>Frontiers in Psychiatry</i>, 12:641286. doi: <a href=\"https://doi.org/10.3389/fpsyt.2021.641286\" target=\"_blank\" rel=\"noopener\">10.3389/fpsyt.2021.641286</a></li><li lang=\"en\">Trofimova, I. &amp; Gaykalova, A. (2021). Emotionality vs. other biobehavioural traits: a look at neurochemical biomarkers for their differentiation. <i>Frontiers in Psychology</i>, 12:781631. doi: <a href=\"https://doi.org/10.3389/fpsyg.2021.781631\" target=\"_blank\" rel=\"noopener\">10.3389/fpsyg.2021.781631</a></li><li lang=\"en\">Trofimova, I. (2022). Transient nature of stable behavioural patterns, and how we can respect it. <i>Current Opinion in Behavioral Sciences</i>, 44. doi: <a href=\"https://doi.org/10.1016/j.cobeha.2022.101109\" target=\"_blank\" rel=\"noopener\">10.1016/j.cobeha.2022.101109</a></li><li lang=\"en\">Trofimova, I. &amp; Jahangir, S. (2026). Extraversion overrated: neurochemical complexity points to an unnecessary blend of distinct systems in one pot. <i>Frontiers in Human Neuroscience</i>, 20:2010611. doi: <a href=\"https://doi.org/10.3389/fnhum.2026.2010611\" target=\"_blank\" rel=\"noopener\">10.3389/fnhum.2026.2010611</a></li></ol>"; const refsBlock=()=>`<div class="refs"><h4>${t("refs_h")}</h4>${REFS_HTML}<p><a href="https://psonline.ca/PS-STQ.htm#reference" target="_blank" rel="noopener">${t("refs_full")}</a></p></div>`;
+  $("attrib-intro").innerHTML=t("attrib")+refsBlock(); $("attrib-result").innerHTML=t("attrib")+refsBlock();
   document.querySelectorAll("#lang button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lang===L ? "true":"false"));
   introState();
   if(current==="s-q") renderQ();
@@ -748,11 +762,11 @@ function renderResult(){
   // line chart as in the author's Excel: 13 points, y 4–24
   const pts=[...XO,"CNTL"]; const W=720,H=300,Lm=40,R=12,Tm=14,B=40; const x=i=>Lm+i*(W-Lm-R)/(pts.length-1); const y=val=>Tm+(24-val)*(H-Tm-B)/20;
   let svg=`<svg class="linechart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${t("chart_aria")}">`;
-  for(let val=4;val<=24;val+=2){ svg+=`<line x1="${Lm}" x2="${W-R}" y1="${y(val)}" y2="${y(val)}" stroke="var(--line)" stroke-width="1"/><text x="${Lm-8}" y="${y(val)+4}" font-size="11" text-anchor="end" fill="var(--muted)">${val}</text>`; }
+  for(let val=4;val<=24;val+=2){ svg+=`<line x1="${Lm}" x2="${W-R}" y1="${y(val)}" y2="${y(val)}" stroke="var(--line)" stroke-width="1"/><text x="${Lm-8}" y="${y(val)+4}" font-size="13" text-anchor="end" fill="var(--muted)">${val}</text>`; }
   svg+=`<rect x="${Lm}" y="${y(18.5)}" width="${W-Lm-R}" height="${y(13.5)-y(18.5)}" fill="var(--ok)" opacity="0.10"/>`;
   svg+=`<polyline fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linejoin="round" points="${pts.map((k,i)=>`${x(i)},${y(sc[k])}`).join(" ")}"/>`;
   pts.forEach((k,i)=>{ const z=k==="CNTL"?"":Sx(k).zone; const col=z==="hi"?"var(--hi)":z==="lo"?"var(--lo)":k==="CNTL"?"var(--muted)":"var(--ok)";
-    svg+=`<circle cx="${x(i)}" cy="${y(sc[k])}" r="5" fill="${col}" stroke="var(--bg)" stroke-width="1.5"/><text x="${x(i)}" y="${y(sc[k])-10}" font-size="12" font-weight="600" text-anchor="middle" fill="var(--fg)">${sc[k]}</text><text x="${x(i)}" y="${H-B+18}" font-size="11.5" text-anchor="middle" fill="var(--muted)">${k}</text>`; });
+    svg+=`<circle cx="${x(i)}" cy="${y(sc[k])}" r="5" fill="${col}" stroke="var(--bg)" stroke-width="1.5"/><text x="${x(i)}" y="${y(sc[k])-10}" font-size="14" font-weight="600" text-anchor="middle" fill="var(--fg)">${sc[k]}</text><text x="${x(i)}" y="${H-B+18}" font-size="13.5" text-anchor="middle" fill="var(--muted)">${k}</text>`; });
   svg+=`</svg>`; $("linechart").innerHTML=svg;
   // table as in Summary!D32:N44
   const tb=$("restable"); const zl={ok:"Average",hi:"High",lo:"Low"}; const vl={ok:"Valid",doubt:"May not be valid",err:"Check the value"}; const th=t("th");
